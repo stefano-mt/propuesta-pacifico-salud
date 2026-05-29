@@ -168,7 +168,7 @@ html,body{height:100%;font-family:'Poppins',sans-serif;font-size:13px;background
 .badge-amarillo{background:rgba(255,205,0,.2);color:#6b5500;}
 
 /* ── PILAR BLOCK ── */
-.pilar-block{border-radius:16px;overflow:hidden;box-shadow:0 4px 20px rgba(1,33,105,.09);display:flex;flex-direction:column;height:100%;}
+.pilar-block{border-radius:16px;overflow:hidden;box-shadow:0 4px 20px rgba(1,33,105,.09);}
 .pilar-head{
   padding:22px 26px;color:white;display:flex;align-items:center;gap:16px;
 }
@@ -177,7 +177,7 @@ html,body{height:100%;font-family:'Poppins',sans-serif;font-size:13px;background
 .pilar-num-big{font-size:56px;font-weight:800;color:rgba(255,255,255,.15);line-height:1;flex-shrink:0;}
 .pilar-tag{font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:2px;opacity:.6;}
 .pilar-name{font-size:17px;font-weight:700;margin-top:4px;}
-.pilar-body{background:white;padding:20px 26px;flex:1;}
+.pilar-body{background:white;padding:20px 26px;}
 
 /* ── FRENTE TABS ── */
 .frente-tabs{display:flex;gap:8px;margin-bottom:24px;flex-wrap:wrap;}
@@ -222,8 +222,9 @@ html,body{height:100%;font-family:'Poppins',sans-serif;font-size:13px;background
 .tbl strong{font-weight:700;color:var(--azul);}
 .tbl.rosa-head th{background:var(--rosa);}
 .tbl.celeste-head th{background:var(--celeste);}
+.pillar-table td{vertical-align:middle;text-align:left;}
 .sprint-table td{vertical-align:middle;text-align:left;}
-.sprint-table td:first-child{text-align:center;}
+.sprint-table td:first-child{text-align:center;padding-left:0;padding-right:0;}
 
 /* ── TIMELINE ── */
 .tl{position:relative;padding-left:44px;}
@@ -353,6 +354,33 @@ html,body{height:100%;font-family:'Poppins',sans-serif;font-size:13px;background
 .rt-ps{background:rgba(230,26,79,.1);color:var(--rosa);}
 .role-def{font-size:11.5px;color:#555;font-weight:300;line-height:1.5;}
 
+.resp-block{border:1px solid #e0e4ef;border-radius:12px;overflow:hidden;margin-bottom:16px;background:white;}
+.resp-head{display:flex;align-items:center;gap:12px;padding:14px 16px;background:#fafbff;border-bottom:1px solid #e0e4ef;}
+.resp-num{width:34px;height:34px;border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;color:white;flex-shrink:0;}
+.resp-title{font-size:13px;font-weight:800;color:var(--azul);}
+.resp-cols{display:grid;grid-template-columns:1fr 1fr;gap:0;}
+.resp-col{padding:16px;border-right:1px solid #eef0f6;}
+.resp-col:last-child{border-right:none;}
+.resp-list{list-style:none;padding:0;margin-top:10px;}
+.resp-list li{display:flex;gap:8px;font-size:11.5px;font-weight:300;color:#444;line-height:1.55;margin-bottom:7px;align-items:flex-start;}
+.resp-list li::before{content:'✓';font-weight:800;flex-shrink:0;margin-top:1px;}
+.resp-col.fl .resp-list li::before{color:var(--azul);}
+.resp-col.ps .resp-list li::before{color:var(--rosa);}
+.initiative-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;padding:16px;background:rgba(1,33,105,.03);border-top:1px solid #eef0f6;}
+.initiative-label{display:flex;align-items:center;gap:10px;padding:14px 16px 0;background:rgba(1,33,105,.03);border-top:1px solid #eef0f6;}
+.initiative-note{font-size:11px;font-weight:300;color:#555;}
+.initiative-card{background:white;border-radius:10px;border:1px solid #e0e4ef;padding:14px;border-top:3px solid var(--morado);}
+.initiative-title{font-size:12px;font-weight:800;color:var(--azul);margin-bottom:6px;}
+.initiative-desc{font-size:11.5px;font-weight:300;color:#555;line-height:1.6;}
+
+@media(max-width:900px){
+  .resp-cols{grid-template-columns:1fr;}
+  .resp-col{border-right:none;border-bottom:1px solid #eef0f6;}
+  .resp-col:last-child{border-bottom:none;}
+  .initiative-label{align-items:flex-start;flex-direction:column;gap:6px;}
+  .initiative-grid{grid-template-columns:1fr;}
+}
+
 /* ── MODEL DIAGRAM ── */
 .model-diagram{display:grid;grid-template-columns:1fr 2fr 1fr;gap:0;background:#e0e4ef;border-radius:14px;overflow:hidden;margin:20px 0;}
 .md-box{background:white;padding:18px 16px;}
@@ -395,12 +423,12 @@ html,body{height:100%;font-family:'Poppins',sans-serif;font-size:13px;background
 <nav class="sidebar">
   <div class="sb-brand">
 <div class="sb-logo">
-  <img src="https://futurelab.la/wp-content/uploads/2026/05/logo-futurelab.png" alt="Logo FutureLab" style="max-width:160px;width:100%;height:auto;display:block;">
+  <img src="logo-futurelab.png" alt="Logo FutureLab" style="max-width:160px;width:100%;height:auto;display:block;">
 </div>
     <div class="sb-client">
       <div class="sb-client-label">Cliente</div>
       <div class="sb-client-name">Pacífico Salud</div>
-      <div class="sb-client-date">Mayo 2026</div>
+      <div class="sb-client-date">Mayo 2026 · Propuesta</div>
     </div>
   </div>
   <div class="sb-nav" id="sbNav">
@@ -415,7 +443,7 @@ html,body{height:100%;font-family:'Poppins',sans-serif;font-size:13px;background
     <div class="nav-group-label">Equipo y Comercial</div>
     <div class="nav-item" data-tab="equipo"><span class="ni-num">07</span><span class="ni-label">Equipo</span></div>
     <div class="nav-item" data-tab="alcance"><span class="ni-num">08</span><span class="ni-label">Alcance del Servicio</span></div>
-    <div class="nav-item" data-tab="inversion" style="display:none !important;"><span class="ni-num">09</span><span class="ni-label">Propuesta Económica</span></div>
+    <div class="nav-item" data-tab="inversion"><span class="ni-num">09</span><span class="ni-label">Propuesta Económica</span></div>
   </div>
   <div class="sb-footer">
     <div class="sb-version">Versión <strong>28.05.2026</strong> · Confidencial</div>
@@ -432,28 +460,30 @@ html,body{height:100%;font-family:'Poppins',sans-serif;font-size:13px;background
   <div class="hero">
     <div class="hero-badge">Propuesta Comercial</div>
     <div class="hero-title">Oficina de <em>Transformación de Canales</em> con Inteligencia Artificial</div>
-    <div class="hero-sub">Acompañamiento negocio-técnico de 6 meses para diseñar, implementar y escalar agentes IA en canales de salud — priorizando el CIC como frente inicial.</div>
+    <div class="hero-sub">Acompañamiento negocio-técnico de 6 meses para implementar una arquitectura orquestadora de agentes IA, fortalecer capacidades internas y acompañar como PM externo las iniciativas IA en curso de Pacífico Salud.</div>
     <div class="hero-meta">
       <div class="hm-item"><strong>Pacífico Salud</strong>Cliente</div>
       <div class="hm-item"><strong>28.05.2026</strong>Fecha</div>
       <div class="hm-item"><strong>6 meses</strong>Duración</div>
-      <div class="hm-item"><strong>2 Pilares · 6 Frentes</strong>Estructura</div>
+      <div class="hm-item"><strong>2 Pilares · 5 Frentes</strong>Estructura</div>
     </div>
   </div>
 
   <div class="card card-top-celeste mb24">
     <div class="card-label mb8">Visión ejecutiva</div>
     <div class="scope-item">
-      <div class="scope-icon si-in">🧭</div>
-      <div><div class="scope-cat">Plan de transformación 2026–2028</div><div class="scope-desc">Pacífico Salud viene avanzando su <strong>Plan de Transformación de Canales de Salud 2026–2028</strong>, que servirá como marco para priorizar capacidades de inteligencia artificial.</div></div>
-    </div>
-    <div class="scope-item">
-      <div class="scope-icon si-in">🏗️</div>
-      <div><div class="scope-cat">Foco FutureLab</div><div class="scope-desc">FutureLab acompañará la <strong>arquitectura, priorización, co‑implementación controlada y transferencia de capacidades</strong> para agentes IA aplicados a canales de salud.</div></div>
+      <div class="scope-icon" style="background:rgba(0,181,226,.1);color:var(--celeste)">01</div>
+      <div>
+        <div class="scope-cat">Estrategia interna como punto de partida</div>
+        <div class="scope-desc">Pacífico Salud viene avanzando su <strong>Plan de Transformación de Canales de Salud 2026–2028</strong>. En este contexto, la estrategia interna de canales guiará la implementación de capacidades de inteligencia artificial.</div>
+      </div>
     </div>
     <div class="scope-item" style="border-bottom:none">
-      <div class="scope-icon si-in">🎯</div>
-      <div><div class="scope-cat">Objetivo práctico</div><div class="scope-desc">Convertir oportunidades de IA en agentes o capacidades priorizadas, gobernables, testeadas y escalables, con foco inicial en canales de salud y la operación del CIC.</div></div>
+      <div class="scope-icon si-in">02</div>
+      <div>
+        <div class="scope-cat">FutureLab como habilitador de capacidad IA</div>
+        <div class="scope-desc">El foco estará en la <strong>arquitectura, priorización, co‑implementación controlada y transferencia de capacidades</strong> para convertir oportunidades de IA en agentes o capacidades priorizadas, gobernables, testeadas y escalables, con foco inicial en canales de salud y la operación del CIC.</div>
+      </div>
     </div>
   </div>
 
@@ -463,15 +493,13 @@ html,body{height:100%;font-family:'Poppins',sans-serif;font-size:13px;background
         <div class="pilar-num-big">1</div>
         <div>
           <div class="pilar-tag">Pilar</div>
-          <div class="pilar-name">Laboratorio de Agentes IA</div>
+          <div class="pilar-name">Laboratorio IA y Orquestación Técnica</div>
         </div>
       </div>
       <div class="pilar-body">
         <ul class="bullet-list check">
           <li>F1 — Agente Orquestador MVP</li>
-          <li>F2 — Sprints de quick wins IA</li>
-          <li>F3 — Auditoría Agente de Protocolos</li>
-          <li>F4 — VoiceBot CIC (condicionado)</li>
+          <li>F2 — Roadmap y Sprints IA Futuros</li>
         </ul>
       </div>
     </div>
@@ -480,13 +508,14 @@ html,body{height:100%;font-family:'Poppins',sans-serif;font-size:13px;background
         <div class="pilar-num-big">2</div>
         <div>
           <div class="pilar-tag">Pilar</div>
-          <div class="pilar-name">Mentoring IA y Transferencia</div>
+          <div class="pilar-name">Mentoring IA y Transferencia de Capacidades</div>
         </div>
       </div>
       <div class="pilar-body">
         <ul class="bullet-list check">
-          <li>F5 — Mentoring IA aplicado</li>
-          <li>F6 — Playbook + Meeting-in-a-Box</li>
+          <li>F3 — PM Externo e iniciativas IA</li>
+          <li>F4 — Capacitaciones IA aplicadas</li>
+          <li>F5 — Meeting-in-a-Box IA</li>
         </ul>
       </div>
     </div>
@@ -494,9 +523,27 @@ html,body{height:100%;font-family:'Poppins',sans-serif;font-size:13px;background
 
   <div class="card card-top-azul">
     <div class="card-label mb8">Resultado integral esperado</div>
-    <p style="font-size:13px;font-weight:400;color:#333;line-height:1.75;">
-      Al desplegar esta iniciativa junto a FutureLab, Pacífico Salud obtendrá un laboratorio operativo de agentes IA con metodología clara para identificar, priorizar, implementar y escalar capacidades; un backlog de quick wins priorizado y un sistema de mentoring que fortalece al equipo interno. El resultado es una transformación de canales sostenible y replicable, enfocada en resultados tangibles y evitando soluciones aisladas.
-    </p>
+    <div class="scope-item">
+      <div class="scope-icon si-in">✓</div>
+      <div>
+        <div class="scope-cat">Equipo líder con mayor criterio IA</div>
+        <div class="scope-desc">Pacífico Salud fortalecerá la capacidad del equipo líder de Canales para gestionar iniciativas IA con mayor criterio, orden y gobierno.</div>
+      </div>
+    </div>
+    <div class="scope-item">
+      <div class="scope-icon" style="background:rgba(1,33,105,.1);color:var(--azul)">⚙</div>
+      <div>
+        <div class="scope-cat">Acompañamiento integral de ejecución</div>
+        <div class="scope-desc">El programa combinará mentoring, PM externo sobre iniciativas en curso, capacitaciones, Meeting-in-a-Box e implementación técnica del Agente Orquestador MVP.</div>
+      </div>
+    </div>
+    <div class="scope-item" style="border-bottom:none">
+      <div class="scope-icon" style="background:rgba(0,181,226,.1);color:var(--celeste)">↗</div>
+      <div>
+        <div class="scope-cat">Base preparada para escalar</div>
+        <div class="scope-desc">El resultado será un equipo más preparado para desplegar IA en canales de salud, una arquitectura inicial para conectar agentes y una metodología lista para escalar nuevos sprints luego del programa.</div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -524,7 +571,7 @@ html,body{height:100%;font-family:'Poppins',sans-serif;font-size:13px;background
         <div><div class="scope-cat">Portafolio</div><div class="scope-desc"><strong>EPS (980K afiliados)</strong> + <strong>Masivos (574K)</strong></div></div>
       </div>
     </div>
-    <div class="card card-top-verde">
+    <div class="card card-top-morado">
       <div class="card-label mb8">Tipos de operación CIC</div>
       <div class="scope-item">
         <div class="scope-icon si-in">⚡</div>
@@ -615,27 +662,45 @@ html,body{height:100%;font-family:'Poppins',sans-serif;font-size:13px;background
 
   <div class="card mb24">
     <div class="card-label mb8">Propósito del acompañamiento</div>
-    <p style="font-size:13px;color:#333;line-height:1.8;font-weight:400;">
-      FutureLab acompaña a Pacífico Salud como <strong>socio negocio-técnico</strong> en el diseño, aterrizaje e implementación progresiva de la Transformación de Canales con IA, priorizando el CIC Salud como frente inicial. El acompañamiento articula <strong>método, arquitectura, co-implementación, testing y transferencia de capacidades</strong>, evitando que el trabajo quede limitado a un único piloto aislado.
-    </p>
+    <div class="scope-item">
+      <div class="scope-icon si-in">🤝</div>
+      <div>
+        <div class="scope-cat">Socio negocio-técnico, mentor IA y PM externo</div>
+        <div class="scope-desc">FutureLab acompaña a Pacífico Salud como socio negocio-técnico, mentor IA y PM externo especializado para fortalecer la capacidad interna de despliegue de iniciativas de inteligencia artificial.</div>
+      </div>
+    </div>
+    <div class="scope-item">
+      <div class="scope-icon" style="background:rgba(0,181,226,.1);color:var(--celeste)">🧪</div>
+      <div>
+        <div class="scope-cat">Iniciativas en curso como casos vivos</div>
+        <div class="scope-desc">El acompañamiento se aplicará sobre iniciativas en curso —Agente de Protocolos, Agente de Calidad IA y VoiceBot— como casos vivos para instalar método, criterio, seguimiento, gobierno y toma de decisiones.</div>
+      </div>
+    </div>
+    <div class="scope-item" style="border-bottom:none">
+      <div class="scope-icon" style="background:rgba(1,33,105,.1);color:var(--azul)">⚙</div>
+      <div>
+        <div class="scope-cat">Agente Orquestador MVP y escalamiento posterior</div>
+        <div class="scope-desc">En paralelo, FutureLab implementará técnicamente el Agente Orquestador MVP, que permitirá ordenar la conexión con subagentes actuales y preparar una arquitectura capaz de incorporar nuevas capacidades futuras.</div>
+      </div>
+    </div>
   </div>
 
   <div class="card-label mb16">Objetivos del acompañamiento</div>
   <div class="grid3 mb24">
     <div class="card card-top-celeste">
       <div style="font-size:28px;font-weight:800;color:var(--celeste);margin-bottom:8px;">01</div>
-      <div style="font-size:13px;font-weight:700;color:var(--azul);margin-bottom:6px;">Orquestador funcional</div>
-      <div style="font-size:12px;font-weight:300;color:#555;line-height:1.65;">Implementar una primera versión técnica del Agente Orquestador como punto único de entrada.</div>
+      <div style="font-size:13px;font-weight:700;color:var(--azul);margin-bottom:6px;">Orquestador MVP implementado</div>
+      <div style="font-size:12px;font-weight:300;color:#555;line-height:1.65;">Implementar una primera versión técnica del Agente Orquestador como punto único de entrada y base de la arquitectura.</div>
     </div>
     <div class="card card-top-rosa">
       <div style="font-size:28px;font-weight:800;color:var(--rosa);margin-bottom:8px;">02</div>
-      <div style="font-size:13px;font-weight:700;color:var(--azul);margin-bottom:6px;">Quick wins IA con velocidad</div>
-      <div style="font-size:12px;font-weight:300;color:#555;line-height:1.65;">Definir y operar un método para identificar, priorizar e implementar quick wins IA.</div>
+      <div style="font-size:13px;font-weight:700;color:var(--azul);margin-bottom:6px;">PM externo e iniciativas IA acompañadas</div>
+      <div style="font-size:12px;font-weight:300;color:#555;line-height:1.65;">Acompañar las iniciativas IA en curso como PM externo, instalando seguimiento, criterios de decisión y gobierno en el equipo interno.</div>
     </div>
     <div class="card card-top-verde">
       <div style="font-size:28px;font-weight:800;color:var(--verde);margin-bottom:8px;">03</div>
-      <div style="font-size:13px;font-weight:700;color:var(--azul);margin-bottom:6px;">Capacidades transferidas</div>
-      <div style="font-size:12px;font-weight:300;color:#555;line-height:1.65;">Transferir capacidades prácticas al equipo de Pacífico Salud mediante mentoring IA aplicado.</div>
+      <div style="font-size:13px;font-weight:700;color:var(--azul);margin-bottom:6px;">Capacidades IA transferidas</div>
+      <div style="font-size:12px;font-weight:300;color:#555;line-height:1.65;">Fortalecer al equipo de Pacífico Salud con capacitaciones, Meeting‑in‑a‑Box y transferencia de criterios de decisión para sostener futuras iniciativas IA.</div>
     </div>
   </div>
 
@@ -648,43 +713,42 @@ html,body{height:100%;font-family:'Poppins',sans-serif;font-size:13px;background
       <div class="md-item">Backlog de oportunidades</div>
     </div>
     <div class="md-box center">
-      <div class="md-title" style="border-bottom-color:var(--celeste);">Laboratorio de Agentes IA</div>
+      <div class="md-title" style="border-bottom-color:var(--celeste);">Laboratorio IA y Orquestación</div>
       <div class="md-item" style="font-weight:600;color:var(--azul);">Arquitectura del Orquestador</div>
-      <div class="md-item">Readiness & scoring de casos</div>
-      <div class="md-item">Sprints 1–2 meses / capacidad</div>
-      <div class="md-item">Testing → Go / Ajustar / No-Go</div>
-      <div class="md-item">Escalamiento controlado</div>
+      <div class="md-item">Mapa y conexión de subagentes</div>
+      <div class="md-item">Metodología de readiness y priorización</div>
+      <div class="md-item">Criterios de testing y handoff</div>
+      <div class="md-item">Ruta de escalamiento posterior</div>
     </div>
     <div class="md-box">
-      <div class="md-title" style="border-bottom-color:var(--morado);">Mentoring IA</div>
-      <div class="md-item">Criterio para equipos internos</div>
-      <div class="md-item">Playbook y plantillas</div>
-      <div class="md-item">Sostenibilidad post-acompañamiento</div>
+      <div class="md-title" style="border-bottom-color:var(--morado);">Mentoring IA y Transferencia</div>
+      <div class="md-item">PM externo para iniciativas en curso</div>
+      <div class="md-item">Capacitaciones IA aplicadas</div>
+      <div class="md-item">Meeting‑in‑a‑Box mensual</div>
     </div>
   </div>
 
   <div class="card">
     <div class="card-label mb16">Estructura de pilares y frentes</div>
-    <table class="tbl">
+    <table class="tbl pillar-table">
       <thead><tr><th>Pilar</th><th>Frentes incluidos</th><th>Propósito</th></tr></thead>
       <tbody>
         <tr>
-          <td><strong>Pilar 1</strong><br><span style="font-size:11px;font-weight:300;color:var(--gris);">Laboratorio de Agentes IA</span></td>
+          <td><strong>Pilar 1</strong><br><span style="font-size:11px;font-weight:300;color:var(--gris);">Laboratorio IA y Orquestación Técnica</span></td>
           <td>
             <span class="badge badge-celeste">F1 Orquestador</span>
-            <span class="badge badge-naranja">F2 Quick wins</span>
-            <span class="badge badge-morado">F3 Protocolos</span>
-            <span class="badge badge-verde">F4 VoiceBot</span>
+            <span class="badge badge-naranja">F2 Sprints Futuros</span>
           </td>
-          <td>Instalar capacidad práctica de diseño, implementación, testing y escalamiento de agentes IA en canales de salud.</td>
+          <td>Implementar una arquitectura orquestadora inicial y preparar la metodología de sprints y roadmap para nuevas capacidades IA.</td>
         </tr>
         <tr>
-          <td><strong>Pilar 2</strong><br><span style="font-size:11px;font-weight:300;color:var(--gris);">Mentoring IA y transferencia</span></td>
+          <td><strong>Pilar 2</strong><br><span style="font-size:11px;font-weight:300;color:var(--gris);">Mentoring IA y Transferencia de Capacidades</span></td>
           <td>
-            <span class="badge badge-rosa">F5 Mentoring</span>
-            <span class="badge badge-amarillo">F6 Playbook</span>
+            <span class="badge badge-morado">F3 PM Externo</span>
+            <span class="badge badge-verde">F4 Capacitaciones</span>
+            <span class="badge badge-rosa">F5 Meeting-in-a-Box</span>
           </td>
-          <td>Transferir criterio, método y herramientas para que el equipo de Pacífico Salud sostenga el laboratorio y tome mejores decisiones IA.</td>
+          <td>Fortalecer al equipo de Pacífico Salud a través de acompañamiento PM, formación y rituales para que gestione y escale iniciativas IA con autonomía.</td>
         </tr>
       </tbody>
     </table>
@@ -717,23 +781,164 @@ html,body{height:100%;font-family:'Poppins',sans-serif;font-size:13px;background
     </div>
   </div>
 
-  <div class="card">
+  <div class="card card-top-azul">
     <div class="card-label mb16">Matriz de responsabilidades por componente</div>
-    <table class="tbl">
-      <thead><tr><th style="width:30%">Componente / Actividad</th><th>FutureLab</th><th>Pacífico Salud</th></tr></thead>
-      <tbody>
-        <tr><td><strong>F1 · Setup técnico y accesos</strong></td><td><span class="role-tag rt-fl">FACILITA</span> el kick-off técnico y define requerimientos mínimos.</td><td><span class="role-tag rt-ps">PROVEE</span> licencias, accesos, ambiente dev/UAT y contexto de arquitectura.</td></tr>
-        <tr><td><strong>F1 · Diseño del Orquestador</strong></td><td><span class="role-tag rt-fl">LIDERA</span> el diseño funcional-técnico y <span class="role-tag rt-fl">CO-DISEÑA</span> la lógica de routing.</td><td><span class="role-tag rt-ps">VALIDA</span> arquitectura, restricciones, permisos y criterios de derivación.</td></tr>
-        <tr><td><strong>F1 · Implementación MVP</strong></td><td><span class="role-tag rt-fl">ACOMPAÑA</span> / <span class="role-tag rt-fl">CO-IMPLEMENTA</span> la primera versión funcional.</td><td><span class="role-tag rt-ps">IMPLEMENTA</span> en sus sistemas; <span class="role-tag rt-ps">VALIDA</span> con IA/Tecnología.</td></tr>
-        <tr><td><strong>F2 · Método de quick wins</strong></td><td><span class="role-tag rt-fl">LIDERA</span> el framework de identificación, scoring y priorización.</td><td><span class="role-tag rt-ps">APLICA</span> el método y <span class="role-tag rt-ps">LIDERA</span> la priorización de negocio.</td></tr>
-        <tr><td><strong>F2 · Sprints de agentes IA</strong></td><td><span class="role-tag rt-fl">CO-DISEÑA</span> y <span class="role-tag rt-fl">ACOMPAÑA</span> implementación de hasta 1 agente/sprint.</td><td><span class="role-tag rt-ps">PROVEE</span> data curada, dueño del proceso y usuarios de prueba.</td></tr>
-        <tr><td><strong>F2 · Testing por sprint</strong></td><td><span class="role-tag rt-fl">DISEÑA</span> set de pruebas, <span class="role-tag rt-fl">FACILITA</span> UAT y documenta hallazgos.</td><td><span class="role-tag rt-ps">EJECUTA</span> / <span class="role-tag rt-ps">VALIDA</span> pruebas con usuarios clave.</td></tr>
-        <tr><td><strong>F3 · Auditoría Protocolos</strong></td><td><span class="role-tag rt-fl">LIDERA</span> auditoría técnica, funcional y de adopción.</td><td><span class="role-tag rt-ps">PROVEE</span> acceso al agente, métricas y transcripciones.</td></tr>
-        <tr><td><strong>F4 · VoiceBot CIC</strong></td><td><span class="role-tag rt-fl">EVALÚA</span> factibilidad técnica/operativa; diseña MVP si cumple readiness.</td><td><span class="role-tag rt-ps">CONFIRMA</span> plataforma, IVR, speech legal y viabilidad.</td></tr>
-        <tr><td><strong>F5 · Mentoring IA</strong></td><td><span class="role-tag rt-fl">FACILITA</span> sesiones, casos prácticos y transferencia de criterio.</td><td><span class="role-tag rt-ps">PARTICIPA</span> y aplica aprendizajes en casos reales.</td></tr>
-        <tr><td><strong>F6 · Playbook + Meeting-in-a-Box</strong></td><td><span class="role-tag rt-fl">LIDERA</span> discusión experta y entrega plantillas/checklists.</td><td><span class="role-tag rt-ps">ADOPTA</span> el playbook y sostiene rituales internos.</td></tr>
-      </tbody>
-    </table>
+
+    <div class="resp-block">
+      <div class="resp-head">
+        <div class="resp-num" style="background:var(--celeste)">F1</div>
+        <div class="resp-title">Agente Orquestador MVP</div>
+      </div>
+      <div class="resp-cols">
+        <div class="resp-col fl">
+          <span class="role-tag rt-fl">FutureLab</span>
+          <ul class="resp-list">
+            <li>Lidera diseño funcional-técnico.</li>
+            <li>Co-diseña lógica de routing.</li>
+            <li>Acompaña / co-implementa MVP.</li>
+            <li>Documenta arquitectura y pruebas.</li>
+          </ul>
+        </div>
+        <div class="resp-col ps">
+          <span class="role-tag rt-ps">Pacífico Salud</span>
+          <ul class="resp-list">
+            <li>Provee accesos, licencias y ambiente.</li>
+            <li>Valida restricciones técnicas.</li>
+            <li>Gestiona permisos internos.</li>
+            <li>Valida pruebas con Tecnología / IA.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="resp-block">
+      <div class="resp-head">
+        <div class="resp-num" style="background:var(--naranja)">F2</div>
+        <div class="resp-title">Roadmap y Sprints IA Futuros</div>
+      </div>
+      <div class="resp-cols">
+        <div class="resp-col fl">
+          <span class="role-tag rt-fl">FutureLab</span>
+          <ul class="resp-list">
+            <li>Lidera framework de readiness.</li>
+            <li>Diseña tipologías de sprint.</li>
+            <li>Define criterios Go / Ajustar / No-Go.</li>
+            <li>Documenta roadmap post 6 meses.</li>
+          </ul>
+        </div>
+        <div class="resp-col ps">
+          <span class="role-tag rt-ps">Pacífico Salud</span>
+          <ul class="resp-list">
+            <li>Prioriza backlog futuro.</li>
+            <li>Valida criterios de negocio.</li>
+            <li>Define owners para futuras iniciativas.</li>
+            <li>Decide continuidad del laboratorio.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="resp-block">
+      <div class="resp-head">
+        <div class="resp-num" style="background:var(--morado)">F3</div>
+        <div class="resp-title">PM Externo</div>
+      </div>
+      <div class="resp-cols">
+        <div class="resp-col fl">
+          <span class="role-tag rt-fl">FutureLab</span>
+          <ul class="resp-list">
+            <li>Gestiona PM de iniciativas en curso.</li>
+            <li>Instala rituales de seguimiento.</li>
+            <li>Ordena riesgos, decisiones y próximos pasos.</li>
+            <li>Acompaña a owners internos.</li>
+            <li>Apoya business case cuando aplique.</li>
+            <li>Transfiere método de PM IA.</li>
+          </ul>
+        </div>
+        <div class="resp-col ps">
+          <span class="role-tag rt-ps">Pacífico Salud</span>
+          <ul class="resp-list">
+            <li>Define owners internos.</li>
+            <li>Lidera ejecución interna.</li>
+            <li>Toma decisiones de negocio.</li>
+            <li>Provee información, prioridades y contexto.</li>
+            <li>Participa en rituales de seguimiento.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="initiative-label">
+        <span class="role-tag rt-fl">F3 · Iniciativas acompañadas</span>
+        <span class="initiative-note">Subcomponentes del PM externo, no frentes separados.</span>
+      </div>
+      <div class="initiative-grid">
+        <div class="initiative-card">
+          <div class="initiative-title">Agente IA de Protocolos</div>
+          <div class="initiative-desc">FutureLab acompaña seguimiento, adopción, priorización de mejoras y conexión con Orquestador. Pacífico mantiene ownership funcional y validación.</div>
+        </div>
+        <div class="initiative-card">
+          <div class="initiative-title">Agente de Calidad IA</div>
+          <div class="initiative-desc">FutureLab acompaña estructuración del piloto, criterios de evaluación, aprendizajes y business case. Pacífico lidera con monitores de calidad.</div>
+        </div>
+        <div class="initiative-card">
+          <div class="initiative-title">VoiceBot CIC</div>
+          <div class="initiative-desc">FutureLab acompaña consultoría, business case, ruta de ejecución y decisión Go / No-Go. Pacífico define sponsor, plataforma, decisión y ejecución.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="resp-block">
+      <div class="resp-head">
+        <div class="resp-num" style="background:var(--verde)">F4</div>
+        <div class="resp-title">Capacitaciones IA</div>
+      </div>
+      <div class="resp-cols">
+        <div class="resp-col fl">
+          <span class="role-tag rt-fl">FutureLab</span>
+          <ul class="resp-list">
+            <li>Diseña sesiones.</li>
+            <li>Facilita capacitaciones.</li>
+            <li>Prepara materiales.</li>
+            <li>Conecta conceptos con casos de Pacífico Salud.</li>
+          </ul>
+        </div>
+        <div class="resp-col ps">
+          <span class="role-tag rt-ps">Pacífico Salud</span>
+          <ul class="resp-list">
+            <li>Convoca equipo líder de Canales.</li>
+            <li>Participa en sesiones.</li>
+            <li>Aplica aprendizajes en iniciativas reales.</li>
+            <li>Retroalimenta necesidades de formación.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="resp-block" style="margin-bottom:0">
+      <div class="resp-head">
+        <div class="resp-num" style="background:var(--rosa)">F5</div>
+        <div class="resp-title">Meeting-in-a-Box</div>
+      </div>
+      <div class="resp-cols">
+        <div class="resp-col fl">
+          <span class="role-tag rt-fl">FutureLab</span>
+          <ul class="resp-list">
+            <li>Diseña agenda mensual.</li>
+            <li>Facilita discusión.</li>
+            <li>Sistematiza aprendizajes.</li>
+            <li>Documenta decisiones y próximos pasos.</li>
+          </ul>
+        </div>
+        <div class="resp-col ps">
+          <span class="role-tag rt-ps">Pacífico Salud</span>
+          <ul class="resp-list">
+            <li>Participa con stakeholders.</li>
+            <li>Propone temas.</li>
+            <li>Valida aprendizajes.</li>
+            <li>Define acciones de continuidad.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -747,11 +952,10 @@ html,body{height:100%;font-family:'Poppins',sans-serif;font-size:13px;background
 
   <div class="frente-tabs mb16" id="frenteTabs">
     <div class="ftab active" data-frente="f1">F1 · Orquestador MVP</div>
-    <div class="ftab" data-frente="f2">F2 · Lab Agentes IA</div>
-    <div class="ftab" data-frente="f3">F3 · Agente Protocolos</div>
-    <div class="ftab" data-frente="f4">F4 · VoiceBot CIC</div>
-    <div class="ftab" data-frente="f5">F5 · Mentoring IA</div>
-    <div class="ftab" data-frente="f6">F6 · Playbook</div>
+    <div class="ftab" data-frente="f2">F2 · Sprints IA Futuros</div>
+    <div class="ftab" data-frente="f3">F3 · PM Externo</div>
+    <div class="ftab" data-frente="f4">F4 · Capacitaciones IA</div>
+    <div class="ftab" data-frente="f5">F5 · Meeting-in-a-Box IA</div>
   </div>
 
   <!-- F1 -->
@@ -807,20 +1011,20 @@ html,body{height:100%;font-family:'Poppins',sans-serif;font-size:13px;background
     <div style="display:flex;align-items:center;gap:14px;margin-bottom:20px;">
       <div style="width:48px;height:48px;border-radius:12px;background:var(--naranja);display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:800;color:white;">F2</div>
       <div>
-        <div style="font-size:17px;font-weight:800;color:var(--azul);">Laboratorio de desarrollo de Agentes IA</div>
-        <div style="font-size:12px;font-weight:300;color:var(--gris);margin-top:2px;"><span class="badge badge-azul">Pilar 1</span> Sprints de quick wins</div>
+        <div style="font-size:17px;font-weight:800;color:var(--azul);">Sprints IA Futuros y Roadmap</div>
+        <div style="font-size:12px;font-weight:300;color:var(--gris);margin-top:2px;"><span class="badge badge-azul">Pilar 1</span> Metodología de escalamiento</div>
       </div>
     </div>
     <div class="box-note mb16">
       <strong>Nota de alcance</strong>
-      <p>Un quick win IA no es cualquier idea atractiva. Debe ser un caso acotado, con proceso definido, data sistematizada y curada, bajo riesgo, baja dependencia del core y métricas claras de validación.</p>
+      <p>Las tipologías de sprint se mantienen como metodología de escalamiento posterior. Este frente no implica la ejecución de nuevos agentes durante el programa base, sino la preparación de criterios, matriz de readiness y roadmap.</p>
     </div>
     <div class="card-label mb8">Flujo de trabajo</div>
     <div class="workflow mb24">
-      <div class="wf-step"><div class="wf-n">01</div><div class="wf-title">Inventario & framework</div><div class="wf-desc">Identificación de oportunidades IA y adaptación del framework de priorización.</div><div class="wf-role">FL lidera · PS aporta</div></div>
-      <div class="wf-step"><div class="wf-n">02</div><div class="wf-title">Readiness & scoring</div><div class="wf-desc">Evaluación de impacto, volumen, data, proceso, dependencia core, riesgo.</div><div class="wf-role">FL facilita · PS prioriza</div></div>
-      <div class="wf-step"><div class="wf-n">03</div><div class="wf-title">Sprint 1–2 meses</div><div class="wf-desc">Diseño, configuración/desarrollo y ajustes de una capacidad IA priorizada.</div><div class="wf-role">FL acompaña · PS implementa</div></div>
-      <div class="wf-step"><div class="wf-n">04</div><div class="wf-title">Testing & decisión</div><div class="wf-desc">Pruebas funcionales, técnicas y UAT; decisión Go / Ajustar / No-Go.</div><div class="wf-role">FL + PS prueban</div></div>
+      <div class="wf-step"><div class="wf-n">01</div><div class="wf-title">Backlog & readiness</div><div class="wf-desc">Identificación de oportunidades IA y evaluación de readiness y priorización.</div><div class="wf-role">FL lidera · PS aporta</div></div>
+      <div class="wf-step"><div class="wf-n">02</div><div class="wf-title">Criterios y tipologías</div><div class="wf-desc">Definición de matriz de readiness, criterios de priorización y tipologías de sprint.</div><div class="wf-role">FL facilita · PS prioriza</div></div>
+      <div class="wf-step"><div class="wf-n">03</div><div class="wf-title">Framework de sprints</div><div class="wf-desc">Documentación de sprints según alcance, complejidad y testing.</div><div class="wf-role">FL diseña · PS valida</div></div>
+      <div class="wf-step"><div class="wf-n">04</div><div class="wf-title">Roadmap & activación</div><div class="wf-desc">Creación del roadmap post 6 meses y condiciones para activar nuevos sprints.</div><div class="wf-role">FL recomienda · PS decide</div></div>
     </div>
     <div class="card mb16">
       <div class="card-label mb12">Capa transversal de testing — obligatoria en todos los sprints</div>
@@ -842,26 +1046,26 @@ html,body{height:100%;font-family:'Poppins',sans-serif;font-size:13px;background
     <div class="box-deliver">
       <div class="box-label bl-rosa">Actividades clave</div>
       <ul class="bullet-list deliver">
-        <li>Levantar inventario de oportunidades IA y adaptar el framework de priorización</li>
-        <li>Evaluar readiness y puntuar casos según impacto, volumen, data y riesgo</li>
-        <li>Diseñar y ejecutar sprints de 1–2 meses para capacidades priorizadas</li>
-        <li>Realizar testing funcional, técnico y UAT para decidir Go/Ajustar/No-Go</li>
+        <li>Consolidar backlog futuro de oportunidades IA</li>
+        <li>Diseñar matriz de readiness y criterios de priorización</li>
+        <li>Definir tipologías de sprint y criterios de testing</li>
+        <li>Construir roadmap post 6 meses y condiciones de activación</li>
       </ul>
     </div>
     <div class="grid2">
       <div class="box-deliver">
         <div class="box-label bl-azul">Entregable consolidado</div>
         <ul class="bullet-list deliver">
-          <li>Backlog priorizado de quick wins IA</li>
-          <li>Sprint Pack por agente/capacidad: ficha, alcance, configuración, pruebas, resultados y recomendación</li>
+          <li>Roadmap IA post 6 meses</li>
+          <li>Framework de sprints futuros con matriz de readiness, tipologías y criterios de priorización y testing</li>
         </ul>
       </div>
       <div class="box-results">
         <div class="box-label bl-verde">Resultados esperados</div>
         <ul class="bullet-list results">
-          <li>Capacidad recurrente para priorizar e implementar iniciativas IA</li>
-          <li>Transparencia sobre quick wins reales vs. proyectos adicionales</li>
-          <li>Evidencia de valor y aprendizaje antes de escalar</li>
+          <li>Metodología lista para escalar nuevas capacidades IA</li>
+          <li>Claridad sobre condiciones habilitantes y secuencia de sprints</li>
+          <li>Menor riesgo de iniciar implementaciones sin condiciones habilitantes</li>
         </ul>
       </div>
     </div>
@@ -872,44 +1076,44 @@ html,body{height:100%;font-family:'Poppins',sans-serif;font-size:13px;background
     <div style="display:flex;align-items:center;gap:14px;margin-bottom:20px;">
       <div style="width:48px;height:48px;border-radius:12px;background:var(--morado);display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:800;color:white;">F3</div>
       <div>
-        <div style="font-size:17px;font-weight:800;color:var(--azul);">Auditoría, mejoras e integración del Agente IA de Protocolos</div>
-        <div style="font-size:12px;font-weight:300;color:var(--gris);margin-top:2px;"><span class="badge badge-azul">Pilar 1</span> No se construye desde cero</div>
+        <div style="font-size:17px;font-weight:800;color:var(--azul);">PM externo para iniciativas IA en curso</div>
+        <div style="font-size:12px;font-weight:300;color:var(--gris);margin-top:2px;"><span class="badge badge-morado">Pilar 2</span> Acompañamiento continuo</div>
       </div>
     </div>
     <div class="card mb16">
-      <p style="font-size:13px;color:#333;line-height:1.8;">El Agente IA de Protocolos ya cuenta con avance significativo. El foco será <strong>auditar su arquitectura, calidad funcional, adopción y desempeño</strong>; implementar mejoras priorizadas; y evaluar cómo integrarlo desde el Agente Orquestador.</p>
+      <p style="font-size:13px;color:#333;line-height:1.8;">El acompañamiento de PM externo se centra en fortalecer al equipo interno de Pacífico Salud en el despliegue de iniciativas IA en curso —Agente de Protocolos, Agente de Calidad IA y VoiceBot. FutureLab instalará rituales de seguimiento, ordenará riesgos y decisiones, y transferirá el método de gestión al equipo, asegurando una ejecución más ordenada y autónoma.</p>
     </div>
     <div class="card-label mb8">Flujo de trabajo</div>
     <div class="workflow mb24">
-      <div class="wf-step"><div class="wf-n">01</div><div class="wf-title">Auditoría</div><div class="wf-desc">Revisión técnica, funcional y de adopción del agente actual.</div><div class="wf-role">FL lidera · PS provee</div></div>
-      <div class="wf-step"><div class="wf-n">02</div><div class="wf-title">Testing & hallazgos</div><div class="wf-desc">Pruebas de precisión, casos borde, protocolos similares, latencia y concurrencia.</div><div class="wf-role">FL + PS prueban</div></div>
-      <div class="wf-step"><div class="wf-n">03</div><div class="wf-title">Mejoras priorizadas</div><div class="wf-desc">Ajustes de instrucciones, fuentes, estructura documental, prompts y experiencia.</div><div class="wf-role">FL acompaña · PS implementa</div></div>
-      <div class="wf-step"><div class="wf-n">04</div><div class="wf-title">Integración</div><div class="wf-desc">Evaluación de integración como connected agent, child agent o capacidad invocada.</div><div class="wf-role">FL recomienda · PS valida</div></div>
+      <div class="wf-step"><div class="wf-n">01</div><div class="wf-title">Setup PM</div><div class="wf-desc">Definición de owners, rituales de seguimiento y tablero de iniciativas.</div><div class="wf-role">FL lidera · PS asigna</div></div>
+      <div class="wf-step"><div class="wf-n">02</div><div class="wf-title">Seguimiento de iniciativas</div><div class="wf-desc">Acompañamiento a los owners de Protocolos, Calidad IA y VoiceBot en avances, bloqueos y acciones.</div><div class="wf-role">FL gestiona · PS ejecuta</div></div>
+      <div class="wf-step"><div class="wf-n">03</div><div class="wf-title">Gestión de decisiones y riesgos</div><div class="wf-desc">Identificación de riesgos, dependencias, decisiones pendientes y acuerdos, facilitando criterios Go/Ajustar/No-Go.</div><div class="wf-role">FL facilita · PS decide</div></div>
+      <div class="wf-step"><div class="wf-n">04</div><div class="wf-title">Transferencia y cierre</div><div class="wf-desc">Documentación de aprendizajes y método de PM IA; recomendaciones de continuidad para el equipo interno.</div><div class="wf-role">FL acompaña · PS adopta</div></div>
     </div>
     <!-- Actividades principales del frente F3 -->
     <div class="box-deliver">
       <div class="box-label bl-rosa">Actividades clave</div>
       <ul class="bullet-list deliver">
-        <li>Ejecutar una auditoría técnica, funcional y de adopción del agente actual</li>
-        <li>Desarrollar pruebas de precisión, casos borde, latencia y concurrencia</li>
-        <li>Implementar mejoras priorizadas en fuentes, instrucciones y experiencia</li>
-        <li>Evaluar formas de integración con el Orquestador (connected/child agent)</li>
+        <li>Definir owners y rituales de seguimiento para cada iniciativa</li>
+        <li>Crear y mantener un tablero de iniciativas, riesgos y decisiones</li>
+        <li>Acompañar a los owners de Protocolos, Calidad IA y VoiceBot en avances, bloqueos y acciones</li>
+        <li>Documentar avances, aprendizajes y próximos pasos, transfiriendo el método de gestión al equipo interno</li>
       </ul>
     </div>
     <div class="grid2">
       <div class="box-deliver">
         <div class="box-label bl-azul">Entregable consolidado</div>
         <ul class="bullet-list deliver">
-          <li>Informe de Auditoría y Mejora del Agente IA de Protocolos</li>
-          <li>Hallazgos, mejoras aplicadas o recomendadas, resultados de testing y ruta de integración con el Orquestador</li>
+          <li>PM Pack de Iniciativas IA en Curso: tablero de seguimiento, matriz de riesgos y decisiones</li>
+          <li>Síntesis de avances y aprendizajes por iniciativa, con recomendaciones y plan de continuidad</li>
         </ul>
       </div>
       <div class="box-results">
         <div class="box-label bl-verde">Resultados esperados</div>
         <ul class="bullet-list results">
-          <li>Optimización de capacidad IA ya existente sin duplicar esfuerzos</li>
-          <li>Mayor claridad sobre adopción, precisión, latencia y escalabilidad</li>
-          <li>Alineamiento con arquitectura orquestadora</li>
+          <li>Iniciativas IA con mayor orden y trazabilidad</li>
+          <li>Owners internos mejor acompañados y empoderados</li>
+          <li>Método de PM IA transferido al equipo de Pacífico Salud</li>
         </ul>
       </div>
     </div>
@@ -920,45 +1124,43 @@ html,body{height:100%;font-family:'Poppins',sans-serif;font-size:13px;background
     <div style="display:flex;align-items:center;gap:14px;margin-bottom:20px;">
       <div style="width:48px;height:48px;border-radius:12px;background:var(--verde);display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:800;color:white;">F4</div>
       <div>
-        <div style="font-size:17px;font-weight:800;color:var(--azul);">VoiceBot CIC — Candidato condicionado de sprint</div>
-        <div style="font-size:12px;font-weight:300;color:var(--gris);margin-top:2px;"><span class="badge badge-azul">Pilar 1</span> No es compromiso garantizado de implementación</div>
+        <div style="font-size:17px;font-weight:800;color:var(--azul);">Capacitaciones IA aplicadas</div>
+        <div style="font-size:12px;font-weight:300;color:var(--gris);margin-top:2px;"><span class="badge badge-morado">Pilar 2</span> Formación aplicada</div>
       </div>
     </div>
-    <div class="box-note mb16">
-      <strong>Nota de alcance</strong>
-      <p>El alcance base incluye evaluación y diseño de ruta. La implementación productiva de VoiceBot, integración telefónica, IVR/Genesys, autenticación, grabación, evidencia legal o conexión con core NO está incluida salvo acuerdo adicional.</p>
+    <div class="card mb16">
+      <p style="font-size:13px;color:#333;line-height:1.8;">Este frente desarrolla la fluidez y el criterio práctico en IA para el equipo líder de Canales. Se impartirán sesiones aplicadas al contexto de Pacífico Salud, enfocadas en productividad IA, agentes y Copilot, preparación de datos y testing, y gobernanza y escalamiento responsable.</p>
     </div>
-    <div class="card-label mb8">Flujo de trabajo</div>
+    <div class="card-label mb8">4 sesiones — Flujo de trabajo</div>
     <div class="workflow mb24">
-      <div class="wf-step"><div class="wf-n">00</div><div class="wf-title">Gate de factibilidad</div><div class="wf-desc">Validación de plataforma de voz, IVR/Genesys, entorno, speech legal y dependencias.</div><div class="wf-role">FL evalúa · PS confirma</div></div>
-      <div class="wf-step"><div class="wf-n">01</div><div class="wf-title">Caso candidato</div><div class="wf-desc">Definición de intención, volumen, TMO, riesgo, impacto y criterios de contención.</div><div class="wf-role">FL facilita · PS prioriza</div></div>
-      <div class="wf-step"><div class="wf-n">02</div><div class="wf-title">Diseño MVP</div><div class="wf-desc">Diseño conversacional, handoff, KPIs y alcance de piloto controlado.</div><div class="wf-role">FL lidera · PS valida</div></div>
-      <div class="wf-step"><div class="wf-n">03</div><div class="wf-title">Decisión de ruta</div><div class="wf-desc">Sprint del laboratorio, módulo opcional o fase posterior.</div><div class="wf-role">FL recomienda · PS decide</div></div>
+      <div class="wf-step"><div class="wf-n">01</div><div class="wf-title">Diagnóstico & diseño</div><div class="wf-desc">Alineamiento de participantes, diagnóstico de necesidades y diseño de la malla de capacitación.</div><div class="wf-role">FL diseña · PS valida</div></div>
+      <div class="wf-step"><div class="wf-n">02</div><div class="wf-title">Facilitación de sesiones</div><div class="wf-desc">Ejecución de sesiones con contenidos, ejemplos y ejercicios aplicados al contexto de Pacífico Salud.</div><div class="wf-role">FL facilita · PS participa</div></div>
+      <div class="wf-step"><div class="wf-n">03</div><div class="wf-title">Ejercicios aplicados</div><div class="wf-desc">Desarrollo de ejercicios prácticos relacionados con casos y procesos de Canales, CIC y call center.</div><div class="wf-role">FL guía · PS aplica</div></div>
+      <div class="wf-step"><div class="wf-n">04</div><div class="wf-title">Síntesis & transferencia</div><div class="wf-desc">Resumen de aprendizajes, materiales de referencia y recomendaciones para uso posterior.</div><div class="wf-role">FL documenta · PS adopta</div></div>
     </div>
     <!-- Actividades principales del frente F4 -->
     <div class="box-deliver">
       <div class="box-label bl-rosa">Actividades clave</div>
       <ul class="bullet-list deliver">
-        <li>Validar factibilidad técnica y legal de la plataforma de voz e IVR/Genesys</li>
-        <li>Definir el caso candidato con intención, volumen y criterios de contención</li>
-        <li>Diseñar el MVP del VoiceBot incluyendo conversación, handoff y KPIs</li>
-        <li>Recomendar la ruta: sprint del laboratorio, módulo independiente o fase posterior</li>
+        <li>Diseñar la malla de capacitación y preparar materiales aplicados</li>
+        <li>Facilitar sesiones con ejemplos y ejercicios prácticos</li>
+        <li>Conectar conceptos IA con casos de Pacífico Salud (Protocolos, Calidad IA, VoiceBot)</li>
+        <li>Recopilar preguntas, aprendizajes y recomendaciones para aplicación futura</li>
       </ul>
     </div>
     <div class="grid2">
       <div class="box-deliver">
         <div class="box-label bl-azul">Entregable consolidado</div>
         <ul class="bullet-list deliver">
-          <li>Informe de Factibilidad y Diseño MVP de VoiceBot CIC</li>
-          <li>Decisión Go / Ajustar / No-Go para incorporarlo al laboratorio o tratarlo como módulo independiente</li>
+          <li>Kit de Capacitaciones IA aplicadas: materiales de sesión, ejercicios y síntesis de aprendizajes</li>
         </ul>
       </div>
       <div class="box-results">
         <div class="box-label bl-verde">Resultados esperados</div>
         <ul class="bullet-list results">
-          <li>Claridad sobre si el VoiceBot es quick win real o requiere proyecto específico</li>
-          <li>Reducción de riesgo de comprometer implementación sin plataforma lista</li>
-          <li>Definición de ruta de piloto controlado si cumple readiness</li>
+          <li>Equipo líder de Canales con mayor fluidez IA</li>
+          <li>Mejor criterio para evaluar casos IA y diseñar iniciativas</li>
+          <li>Base compartida de conocimientos aplicados a proyectos de Pacífico Salud</li>
         </ul>
       </div>
     </div>
@@ -969,92 +1171,43 @@ html,body{height:100%;font-family:'Poppins',sans-serif;font-size:13px;background
     <div style="display:flex;align-items:center;gap:14px;margin-bottom:20px;">
       <div style="width:48px;height:48px;border-radius:12px;background:var(--rosa);display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:800;color:white;">F5</div>
       <div>
-        <div style="font-size:17px;font-weight:800;color:var(--azul);">Mentoring IA aplicado</div>
+        <div style="font-size:17px;font-weight:800;color:var(--azul);">Meeting‑in‑a‑Box IA</div>
         <div style="font-size:12px;font-weight:300;color:var(--gris);margin-top:2px;"><span class="badge badge-morado">Pilar 2</span> Transferencia de capacidades</div>
       </div>
     </div>
     <div class="card mb16">
-      <p style="font-size:13px;color:#333;line-height:1.8;">Este frente desarrolla <strong>fluidez y criterio práctico en IA</strong> para líderes y equipos vinculados al laboratorio. No es capacitación genérica — es mentoring aplicado a los casos reales que Pacífico Salud priorice durante el acompañamiento.</p>
+      <p style="font-size:13px;color:#333;line-height:1.8;">Este frente fortalece la cultura, la discusión y la toma de decisiones mediante <strong>sesiones mensuales tipo Meeting‑in‑a‑Box</strong>. Cada encuentro revisa avances, bloqueos y aprendizajes de las iniciativas IA, registra acuerdos y consolida el método en un Playbook para la continuidad.</p>
     </div>
-    <div class="card-label mb8">4 sesiones — Flujo de trabajo</div>
+    <div class="card-label mb8">Ritmo mensual — Flujo de trabajo</div>
     <div class="workflow mb24">
-      <div class="wf-step"><div class="wf-n">01</div><div class="wf-title">Fundamentos IA</div><div class="wf-desc">Qué sí y qué no puede resolver IA en canales, contact center y salud/seguros.</div><div class="wf-role">FL facilita · PS participa</div></div>
-      <div class="wf-step"><div class="wf-n">02</div><div class="wf-title">Agentes & Copilot</div><div class="wf-desc">Lógica de Orquestador, subagentes, fuentes, prompts y buenas prácticas.</div><div class="wf-role">FL facilita · PS aplica</div></div>
-      <div class="wf-step"><div class="wf-n">03</div><div class="wf-title">Data & testing</div><div class="wf-desc">Preparación de conocimiento IA-ready, evaluación de respuestas y métricas.</div><div class="wf-role">FL facilita · PS aplica</div></div>
-      <div class="wf-step"><div class="wf-n">04</div><div class="wf-title">Gobierno & escala</div><div class="wf-desc">Responsible AI, criterios de aprobación, monitoreo, adopción y escalamiento.</div><div class="wf-role">FL facilita · PS adopta</div></div>
+      <div class="wf-step"><div class="wf-n">01</div><div class="wf-title">Preparación & agenda</div><div class="wf-desc">Diseño de la agenda de la sesión, definición de participantes y objetivos.</div><div class="wf-role">FL diseña · PS valida</div></div>
+      <div class="wf-step"><div class="wf-n">02</div><div class="wf-title">Facilitación de la sesión</div><div class="wf-desc">Ejecución de la reunión Meeting‑in‑a‑Box para revisar avances, aprendizajes, bloqueos y próximos pasos de las iniciativas IA.</div><div class="wf-role">FL facilita · PS participa</div></div>
+      <div class="wf-step"><div class="wf-n">03</div><div class="wf-title">Sistematización & acuerdos</div><div class="wf-desc">Registro de aprendizajes, acuerdos, decisiones y próximos pasos en un formato estructurado.</div><div class="wf-role">FL documenta · PS valida</div></div>
+      <div class="wf-step"><div class="wf-n">04</div><div class="wf-title">Transferencia & adopción</div><div class="wf-desc">Consolidación del Playbook con plantillas y criterios de gobierno, entrega de minutas y guía para replicar el ritual internamente.</div><div class="wf-role">FL entrega · PS adopta</div></div>
     </div>
     <!-- Actividades principales del frente F5 -->
     <div class="box-deliver">
       <div class="box-label bl-rosa">Actividades clave</div>
       <ul class="bullet-list deliver">
-        <li>Conducir 4 sesiones de mentoring aplicadas a casos reales de Pacífico Salud</li>
-        <li>Explorar fundamentos de IA en canales de salud y contact center</li>
-        <li>Profundizar en agentes, Copilot, preparación de data y pruebas</li>
-        <li>Desarrollar criterios de gobierno, responsible AI y escalamiento</li>
+        <li>Diseñar agendas mensuales alineadas a avances del laboratorio y sus iniciativas</li>
+        <li>Facilitar las sesiones de Meeting‑in‑a‑Box y guiar la discusión hacia decisiones</li>
+        <li>Documentar acuerdos, aprendizajes y recomendaciones en minutas y plantillas</li>
+        <li>Consolidar el Playbook de Meeting‑in‑a‑Box con plantillas, criterios y guías</li>
       </ul>
     </div>
     <div class="grid2">
       <div class="box-deliver">
         <div class="box-label bl-azul">Entregable consolidado</div>
         <ul class="bullet-list deliver">
-          <li>Materiales de Mentoring IA aplicado</li>
-          <li>Síntesis de sesiones, ejercicios, casos discutidos y criterios prácticos de decisión</li>
+          <li>Meeting‑in‑a‑Box IA Pack: agendas, minutas, aprendizajes, acuerdos, playbook y plantillas de continuidad</li>
         </ul>
       </div>
       <div class="box-results">
         <div class="box-label bl-verde">Resultados esperados</div>
         <ul class="bullet-list results">
-          <li>Equipo con criterio para distinguir casos viables de alto riesgo</li>
-          <li>Mejor conversación entre negocio, Tecnología, Seguridad y Compliance</li>
-          <li>Mayor capacidad de sostener el laboratorio internamente</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-
-  <!-- F6 -->
-  <div class="frente-panel" id="panel-f6">
-    <div style="display:flex;align-items:center;gap:14px;margin-bottom:20px;">
-      <div style="width:48px;height:48px;border-radius:12px;background:#a07000;display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:800;color:white;">F6</div>
-      <div>
-        <div style="font-size:17px;font-weight:800;color:var(--azul);">Playbook y Meeting-in-a-Box IA</div>
-        <div style="font-size:12px;font-weight:300;color:var(--gris);margin-top:2px;"><span class="badge badge-morado">Pilar 2</span> Sostenibilidad del método</div>
-      </div>
-    </div>
-    <div class="card mb16">
-      <p style="font-size:13px;color:#333;line-height:1.8;">Este frente consolida el conocimiento generado durante el acompañamiento. Incluye <strong>espacios mensuales tipo Meeting-in-a-Box</strong> para revisar avances, bloqueos, aprendizajes y decisiones críticas del laboratorio.</p>
-    </div>
-    <div class="card-label mb8">Flujo de trabajo</div>
-    <div class="workflow mb24">
-      <div class="wf-step"><div class="wf-n">01</div><div class="wf-title">Captura de aprendizajes</div><div class="wf-desc">Registro de decisiones, bloqueos, criterios y aprendizajes de cada sprint.</div><div class="wf-role">FL lidera · PS participa</div></div>
-      <div class="wf-step"><div class="wf-n">02</div><div class="wf-title">Plantillas & checklists</div><div class="wf-desc">Ficha de caso, matriz readiness, checklist de testing y criterios Go/No-Go.</div><div class="wf-role">FL provee · PS valida</div></div>
-      <div class="wf-step"><div class="wf-n">03</div><div class="wf-title">Meeting-in-a-Box</div><div class="wf-desc">Sesión mensual de discusión experta conectada a avances reales del laboratorio.</div><div class="wf-role">FL facilita · PS participa</div></div>
-      <div class="wf-step"><div class="wf-n">04</div><div class="wf-title">Playbook final</div><div class="wf-desc">Consolidación de método, plantillas, gobierno mínimo y recomendaciones.</div><div class="wf-role">FL entrega · PS adopta</div></div>
-    </div>
-    <!-- Actividades principales del frente F6 -->
-    <div class="box-deliver">
-      <div class="box-label bl-rosa">Actividades clave</div>
-      <ul class="bullet-list deliver">
-        <li>Registrar decisiones, bloqueos y aprendizajes de cada sprint</li>
-        <li>Diseñar plantillas, matrices de readiness y checklists de testing</li>
-        <li>Facilitar reuniones mensuales tipo Meeting-in-a-Box para discusión experta</li>
-        <li>Consolidar el Playbook final con método, gobierno y recomendaciones</li>
-      </ul>
-    </div>
-    <div class="grid2">
-      <div class="box-deliver">
-        <div class="box-label bl-azul">Entregable consolidado</div>
-        <ul class="bullet-list deliver">
-          <li>Playbook de Laboratorio y Mentoring IA para Canales</li>
-          <li>Plantillas, checklists, criterios de priorización, readiness, testing, gobierno mínimo y recomendaciones de continuidad</li>
-        </ul>
-      </div>
-      <div class="box-results">
-        <div class="box-label bl-verde">Resultados esperados</div>
-        <ul class="bullet-list results">
-          <li>Transferencia explícita de método y herramientas, no solo resultados</li>
-          <li>Mayor autonomía de Pacífico Salud para gestionar nuevas solicitudes</li>
-          <li>Base documental para sostener el Laboratorio de Agentes IA</li>
+          <li>Cultura y discusión IA fortalecida a lo largo del programa</li>
+          <li>Mejor alineamiento entre negocio, Tecnología, Calidad y CIC</li>
+          <li>Adopción del ritual Meeting‑in‑a‑Box y uso del Playbook para sostener el laboratorio después del acompañamiento</li>
         </ul>
       </div>
     </div>
@@ -1070,7 +1223,7 @@ html,body{height:100%;font-family:'Poppins',sans-serif;font-size:13px;background
   <div class="divider"></div>
 
   <div class="card mb24">
-    <p style="font-size:13px;color:#333;line-height:1.8;font-weight:400;">Programa base de <strong>seis meses</strong>. Los sprints operan de 1 a 2 meses según readiness, complejidad funcional y dependencias técnicas. El cronograma final se ajustará en el kick-off según disponibilidad de accesos, responsables y prioridades de Pacífico Salud.</p>
+    <p style="font-size:13px;color:#333;line-height:1.8;font-weight:400;">Programa base de <strong>seis meses</strong>. La secuencia parte con el arranque operativo, instala capacidades IA en el equipo líder, activa el PM externo sobre iniciativas en curso y luego implementa el <strong>Agente Orquestador MVP entre las semanas 8 y 20</strong>. Las sesiones Meeting‑in‑a‑Box operan como ritual transversal para consolidar aprendizajes, decisiones y próximos pasos. El cronograma final se ajustará en el kick‑off según disponibilidad de accesos, responsables y prioridades de Pacífico Salud.</p>
   </div>
 
   <div class="tl mb32">
@@ -1087,47 +1240,47 @@ html,body{height:100%;font-family:'Poppins',sans-serif;font-size:13px;background
     <div class="tl-item">
       <div class="tl-dot" style="background:var(--celeste);">1</div>
       <div class="tl-card" style="border-left-color:var(--celeste)">
-        <div class="tl-phase" style="color:var(--celeste);">Fase 1 · Orquestador + backlog</div>
-        <div class="tl-title">Diseño del Agente Orquestador y backlog priorizado</div>
-        <div class="tl-dur">⏱ Semanas 2–4</div>
-        <div class="tl-desc">Diseño del Agente Orquestador, mapa inicial de capacidades, framework de quick wins y backlog priorizado.</div>
-        <div class="tl-result">→ Orquestador MVP iniciado, backlog y casos candidatos</div>
+        <div class="tl-phase" style="color:var(--celeste);">Fase 1 · Capacitaciones IA aplicadas</div>
+        <div class="tl-title">Alineamiento, criterio IA y capacidades base</div>
+        <div class="tl-dur">⏱ Semanas 2–7</div>
+        <div class="tl-desc">Sesiones prácticas sobre productividad IA, agentes &amp; Copilot, data &amp; testing, y gobernanza, conectadas con casos reales de Pacífico Salud.</div>
+        <div class="tl-result">→ Equipo líder de Canales con lenguaje común, criterio de aplicación y base metodológica para ejecutar iniciativas IA</div>
       </div>
     </div>
     <div class="tl-item">
       <div class="tl-dot" style="background:var(--morado);">2</div>
       <div class="tl-card" style="border-left-color:var(--morado)">
-        <div class="tl-phase" style="color:var(--morado);">Fase 2 · Sprint Protocolos</div>
-        <div class="tl-title">Auditoría y mejoras del Agente de Protocolos</div>
-        <div class="tl-dur">⏱ Semanas 5–7</div>
-        <div class="tl-desc">Auditoría, mejoras priorizadas, testing e integración/compatibilidad del Agente de Protocolos.</div>
-        <div class="tl-result">→ Informe de auditoría, mejoras y ruta de integración</div>
+        <div class="tl-phase" style="color:var(--morado);">Fase 2 · PM Externo e iniciativas IA</div>
+        <div class="tl-title">Acompañamiento PM de iniciativas IA en curso</div>
+        <div class="tl-dur">⏱ Semanas 3–24 (transversal)</div>
+        <div class="tl-desc">Seguimiento y gestión de las iniciativas IA en curso (Protocolos, Calidad IA, VoiceBot), con rituales, owners, decisiones, riesgos y próximos pasos.</div>
+        <div class="tl-result">→ Tablero de iniciativas IA, criterios Go / Ajustar / No-Go, decisiones documentadas y recomendaciones de continuidad</div>
       </div>
     </div>
     <div class="tl-item">
       <div class="tl-dot" style="background:var(--naranja);">3</div>
       <div class="tl-card" style="border-left-color:var(--naranja)">
-        <div class="tl-phase" style="color:var(--naranja);">Fase 3 · Sprints de agentes IA</div>
-        <div class="tl-title">Implementación de sprints priorizados por readiness</div>
-        <div class="tl-dur">⏱ Semanas 5–16 (paralelo a F2)</div>
-        <div class="tl-desc">Implementación de sprints priorizados, según readiness y complejidad. Hasta 1 agente/capacidad por sprint.</div>
-        <div class="tl-result">→ Sprint Packs con resultados, testing y recomendación Go/Ajustar/No-Go</div>
+        <div class="tl-phase" style="color:var(--naranja);">Fase 3 · Agente Orquestador MVP</div>
+        <div class="tl-title">Diseño e implementación del Agente Orquestador</div>
+        <div class="tl-dur">⏱ Semanas 8–20</div>
+        <div class="tl-desc">Diseño funcional‑técnico, lógica de routing, configuración en Copilot Studio/Azure, conexión con subagentes actuales, pruebas de intención y handoff.</div>
+        <div class="tl-result">→ Orquestador MVP implementado, mapa de subagentes, reglas de routing y pruebas documentadas</div>
       </div>
     </div>
     <div class="tl-item">
       <div class="tl-dot" style="background:var(--rosa);">4</div>
       <div class="tl-card" style="border-left-color:var(--rosa)">
-        <div class="tl-phase">Fase 4 · Mentoring IA</div>
-        <div class="tl-title">Sesiones de mentoring, Meeting-in-a-Box y playbook</div>
-        <div class="tl-dur">⏱ Transversal a todo el programa</div>
-        <div class="tl-desc">4 sesiones de mentoring aplicado + reuniones mensuales Meeting-in-a-Box + consolidación del Playbook.</div>
-        <div class="tl-result">→ Materiales, plantillas y Playbook final de Laboratorio</div>
+        <div class="tl-phase">Fase 4 · Meeting‑in‑a‑Box IA</div>
+        <div class="tl-title">Sesiones Meeting‑in‑a‑Box IA &amp; Playbook final</div>
+        <div class="tl-dur">⏱ Mensual · Semanas 4–24</div>
+        <div class="tl-desc">Sesiones mensuales para revisar avances, aprendizajes, decisiones, riesgos y criterios de continuidad, con consolidación progresiva del Playbook.</div>
+        <div class="tl-result">→ Playbook completo, acuerdos trazables y adopción interna del ritual Meeting‑in‑a‑Box</div>
       </div>
     </div>
   </div>
 
-  <div class="card">
-    <div class="card-label mb16">Tipos de sprint — gestión de expectativas</div>
+    <div class="card">
+    <div class="card-label mb16">Tipologías de sprint futuro — aplicables post 6 meses</div>
     <table class="tbl sprint-table">
       <tbody>
         <tr>
@@ -1181,30 +1334,28 @@ html,body{height:100%;font-family:'Poppins',sans-serif;font-size:13px;background
     </div>
     <div class="team-card">
       <div class="team-avatar" style="background:var(--rosa);">LT</div>
-      <div class="team-role">Líder Negocio-Técnico</div>
-      <div class="team-name">Líder de Transformación IA</div>
-      <div class="team-desc">Articula estrategia de canales, casos IA, procesos y tecnología bajo un sistema de trabajo; lidera el equipo técnico para el diseño e implementación de sprints.</div>
+      <div class="team-role">PM Externo y Líder IA</div>
+      <div class="team-name">PM Externo y Líder IA</div>
+      <div class="team-desc">Lidera el acompañamiento PM externo, gestiona el seguimiento de iniciativas IA en curso, coordina con owners internos y articula la estrategia de canales con las capacidades de inteligencia artificial.</div>
     </div>
     <div class="team-card">
       <div class="team-avatar" style="background:var(--morado);">EG</div>
-      <div class="team-role">Especialista</div>
-      <div class="team-name">Gobernanza y Formación IA</div>
-      <div class="team-desc">Diseña y facilita sesiones formativas y Meeting-in-a-Box, transfiriendo criterios y capacidades al equipo de Pacífico Salud.</div>
+      <div class="team-role">Formación y Gobierno IA</div>
+      <div class="team-name">Especialista en Formación y Gobierno IA</div>
+      <div class="team-desc">Diseña y facilita capacitaciones IA aplicadas, lidera las sesiones Meeting‑in‑a‑Box y transfiere criterios de gobierno y adopción al equipo de Pacífico Salud.</div>
     </div>
   </div>
 
-  <div class="card-label mb16" style="margin-top:40px;">Equipo Pacífico Salud — Contraparte activa requerida</div>
-  <div class="card">
+  <div class="card-label mb16" style="margin-top:48px;">Equipo Pacífico Salud — Contraparte activa requerida</div>
+  <div class="card card-top-rosa">
     <table class="tbl">
       <thead><tr><th>Perfil</th><th>Rol en el acompañamiento</th></tr></thead>
       <tbody>
-        <tr><td><strong>Sponsor de Transformación de Canales</strong></td><td>Decisiones ejecutivas, validación del roadmap y alineamiento estratégico</td></tr>
-        <tr><td><strong>Líder CIC</strong></td><td>Validación operativa y acompañamiento en pruebas con asesores</td></tr>
-        <tr><td><strong>Líder de Experiencia / Procesos</strong></td><td>Aporta estrategia interna como insumo, flujos, criterios de experiencia y validación de journeys operativos</td></tr>
-        <tr><td><strong>Product Owner del Agente de Protocolos</strong></td><td>Gestión del Agente IA, validación de mejoras y seguimiento del piloto</td></tr>
-        <tr><td><strong>Referente de IA / Tecnología</strong></td><td>Soporte técnico, acceso a Copilot Studio y validación de arquitectura</td></tr>
-        <tr><td><strong>Referente de Seguridad / Compliance</strong></td><td>Alineamiento regulatorio y controles de gobierno IA</td></tr>
-        <tr><td><strong>Supervisores y Usuarios Clave CIC</strong></td><td>Pruebas de agentes, retroalimentación y adopción interna</td></tr>
+        <tr><td><strong>Sponsor de Transformación de Canales</strong></td><td>Toma decisiones ejecutivas, valida prioridades y destraba definiciones críticas del programa.</td></tr>
+        <tr><td><strong>Product Owner de Canales / CIC</strong></td><td>Centraliza la coordinación operativa, prioriza necesidades del negocio y valida avances con usuarios clave.</td></tr>
+        <tr><td><strong>Referente IA / Tecnología</strong></td><td>Gestiona accesos, ambiente, restricciones técnicas, permisos y validación de arquitectura.</td></tr>
+        <tr><td><strong>Owners de iniciativas IA en curso</strong></td><td>Representan Protocolos, Calidad IA y VoiceBot; entregan contexto, validan mejoras y ejecutan acciones internas.</td></tr>
+        <tr><td><strong>Usuarios clave CIC / Calidad</strong></td><td>Participan en pruebas, retroalimentan resultados y ayudan a validar adopción operativa.</td></tr>
       </tbody>
     </table>
   </div>
@@ -1224,16 +1375,12 @@ html,body{height:100%;font-family:'Poppins',sans-serif;font-size:13px;background
         <div style="width:32px;height:32px;border-radius:50%;background:rgba(108,194,74,.15);color:#3a7d1e;display:flex;align-items:center;justify-content:center;font-size:16px;">✓</div>
         <div class="card-label" style="margin:0;">Dentro de alcance</div>
       </div>
-      <div class="scope-item"><div class="scope-icon si-in">✓</div><div><div class="scope-cat">Laboratorio de Agentes IA</div><div class="scope-desc">Diseño del método de experimentación, priorización, sprints, testing y escalamiento.</div></div></div>
-      <div class="scope-item"><div class="scope-icon si-in">✓</div><div><div class="scope-cat">Agente Orquestador MVP</div><div class="scope-desc">Diseño e implementación inicial en Copilot Studio / Azure, sujeto a accesos y validación técnica.</div></div></div>
-      <div class="scope-item"><div class="scope-icon si-in">✓</div><div><div class="scope-cat">Backlog de quick wins IA</div><div class="scope-desc">Inventario, scoring, matriz de readiness y priorización de casos IA para canales de salud.</div></div></div>
-      <div class="scope-item"><div class="scope-icon si-in">✓</div><div><div class="scope-cat">Sprints de agentes/capacidades</div><div class="scope-desc">Sprints de 1 a 2 meses, con hasta 1 agente/capacidad por sprint, sujeto a readiness.</div></div></div>
-      <div class="scope-item"><div class="scope-icon si-in">✓</div><div><div class="scope-cat">Testing por sprint</div><div class="scope-desc">Pruebas funcionales, conocimiento, routing, permisos, latencia, UAT y decisión Go/Ajustar/No-Go.</div></div></div>
-      <div class="scope-item"><div class="scope-icon si-in">✓</div><div><div class="scope-cat">Agente de Protocolos</div><div class="scope-desc">Auditoría técnica, funcional y de adopción; mejoras priorizadas; recomendación de integración.</div></div></div>
-      <div class="scope-item"><div class="scope-icon si-in">✓</div><div><div class="scope-cat">VoiceBot CIC</div><div class="scope-desc">Evaluación de factibilidad y diseño de ruta. Implementación solo si cumple readiness.</div></div></div>
-      <div class="scope-item"><div class="scope-icon si-in">✓</div><div><div class="scope-cat">Mentoring IA</div><div class="scope-desc">Sesiones aplicadas para fortalecer criterio de IA, agentes, Copilot Studio, data y testing.</div></div></div>
-      <div class="scope-item"><div class="scope-icon si-in">✓</div><div><div class="scope-cat">Playbook y Meeting-in-a-Box</div><div class="scope-desc">Plantillas, checklists, criterios de decisión y espacios mensuales de discusión experta.</div></div></div>
-      <div class="scope-item" style="border-bottom:none"><div class="scope-icon si-in">✓</div><div><div class="scope-cat">Informes consolidados</div><div class="scope-desc">Documentación ejecutiva por frente/sprint, evitando entregables aislados.</div></div></div>
+      <div class="scope-item"><div class="scope-icon si-in">✓</div><div><div class="scope-cat">Agente Orquestador MVP</div><div class="scope-desc">Diseño e implementación inicial en Copilot Studio / Azure como arquitectura base para conectar subagentes.</div></div></div>
+      <div class="scope-item"><div class="scope-icon si-in">✓</div><div><div class="scope-cat">Roadmap y sprints IA futuros</div><div class="scope-desc">Definición del backlog futuro, criterios de readiness y tipologías de sprint para nuevas capacidades IA.</div></div></div>
+      <div class="scope-item"><div class="scope-icon si-in">✓</div><div><div class="scope-cat">PM externo e iniciativas IA en curso</div><div class="scope-desc">Acompañamiento de iniciativas como Protocolos, Calidad IA y VoiceBot a través de un tablero de seguimiento y rituales PM.</div></div></div>
+      <div class="scope-item"><div class="scope-icon si-in">✓</div><div><div class="scope-cat">Capacitaciones IA aplicadas</div><div class="scope-desc">Sesiones de formación práctica en productividad IA, agentes, testing y gobernanza para el equipo líder de Canales.</div></div></div>
+      <div class="scope-item"><div class="scope-icon si-in">✓</div><div><div class="scope-cat">Meeting-in-a-Box IA &amp; Playbook final</div><div class="scope-desc">Rituales mensuales para discusión y alineamiento, sistematizados en un playbook con plantillas y acuerdos para su continuidad.</div></div></div>
+      <div class="scope-item" style="border-bottom:none"><div class="scope-icon si-in">✓</div><div><div class="scope-cat">Informes consolidados</div><div class="scope-desc">Documentación ejecutiva consolidada por pilar, frente o iniciativa, con aprendizajes y recomendaciones.</div></div></div>
     </div>
     <div class="card">
       <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;">
@@ -1267,7 +1414,7 @@ html,body{height:100%;font-family:'Poppins',sans-serif;font-size:13px;background
 <!-- ─────────────────────────────────────────────────── -->
 <!-- 09. PROPUESTA ECONÓMICA -->
 <!-- ─────────────────────────────────────────────────── -->
-<section class="section" id="tab-inversion" style="display:none !important;">
+<section class="section" id="tab-inversion">
   <div class="eyebrow">Sección 09</div>
   <div class="section-title">Propuesta <span>Económica</span></div>
   <div class="divider"></div>
@@ -1276,42 +1423,35 @@ html,body{height:100%;font-family:'Poppins',sans-serif;font-size:13px;background
   <div class="grid2 mb24">
     <div class="mod-card card-top-celeste">
       <div class="mod-num">01</div>
-      <div class="mod-name">Laboratorio de Agentes IA</div>
-      <div style="margin-bottom:12px;"><span class="mod-dur">6 meses</span></div>
+      <div class="mod-name">Pilar 1 · Laboratorio IA y Orquestación Técnica</div>
       <ul class="bullet-list check">
         <li><span class="badge badge-celeste">F1</span> Agente Orquestador MVP</li>
-        <li><span class="badge badge-naranja">F2</span> Sprints de quick wins IA</li>
-        <li><span class="badge badge-morado">F3</span> Agente de Protocolos</li>
-        <li><span class="badge badge-verde">F4</span> VoiceBot condicionado</li>
+        <li><span class="badge badge-naranja">F2</span> Roadmap y Sprints IA Futuros</li>
       </ul>
     </div>
     <div class="mod-card card-top-rosa">
       <div class="mod-num">02</div>
-      <div class="mod-name">Mentoring IA y Transferencia</div>
-      <div style="margin-bottom:12px;"><span class="mod-dur">Transversal · 6 meses</span></div>
+      <div class="mod-name">Pilar 2 · Mentoring IA y Transferencia de Capacidades</div>
       <ul class="bullet-list check">
-        <li><span class="badge badge-rosa">F5</span> Mentoring IA aplicado</li>
-        <li><span class="badge badge-amarillo">F6</span> Playbook + Meeting-in-a-Box</li>
-        <li>4 sesiones de mentoring</li>
-        <li>Reuniones mensuales de revisión</li>
+        <li><span class="badge badge-morado">F3</span> PM Externo e iniciativas IA en curso</li>
+        <li><span class="badge badge-verde">F4</span> Capacitaciones IA aplicadas</li>
+        <li><span class="badge badge-rosa">F5</span> Meeting-in-a-Box IA</li>
       </ul>
     </div>
   </div>
 
   <div class="price-card mb24">
     <div class="price-ribbon">PROGRAMA RECOMENDADO</div>
-    <div class="card-label mb8">Laboratorio IA + Mentoring IA</div>
+    <div class="card-label mb8">Programa base · 2 pilares y 5 frentes</div>
     <div style="margin-bottom:20px;">
-      <div class="price-amount"><span class="price-currency">USD</span>57,000</div>
+      <div class="price-amount"><span class="price-currency">USD</span>42,000</div>
       <div class="price-period">Precio base · No incluye IGV (18%) ni licencias</div>
     </div>
-    <div class="price-feat"><div class="price-feat-check">✓</div><div class="price-feat-text"><strong>Agente Orquestador MVP</strong> en Copilot Studio / Azure, sujeto a accesos</div></div>
-    <div class="price-feat"><div class="price-feat-check">✓</div><div class="price-feat-text"><strong>Método de quick wins</strong>, backlog priorizado y framework de scoring</div></div>
-    <div class="price-feat"><div class="price-feat-check">✓</div><div class="price-feat-text"><strong>Sprints de agentes/capacidades IA</strong> hasta 1 por sprint, con testing completo</div></div>
-    <div class="price-feat"><div class="price-feat-check">✓</div><div class="price-feat-text"><strong>Auditoría y mejora</strong> del Agente de Protocolos existente</div></div>
-    <div class="price-feat"><div class="price-feat-check">✓</div><div class="price-feat-text"><strong>Evaluación de factibilidad</strong> del VoiceBot CIC y diseño de ruta</div></div>
-    <div class="price-feat"><div class="price-feat-check">✓</div><div class="price-feat-text"><strong>4 sesiones de mentoring</strong> IA aplicado con casos reales del laboratorio</div></div>
-    <div class="price-feat" style="border-bottom:none"><div class="price-feat-check">✓</div><div class="price-feat-text"><strong>Playbook final</strong> con plantillas, checklists y gobierno mínimo para continuidad</div></div>
+    <div class="price-feat"><div class="price-feat-check">✓</div><div class="price-feat-text"><strong>F1 · Agente Orquestador MVP</strong> en Copilot Studio / Azure, sujeto a accesos, ambiente y validaciones técnicas.</div></div>
+    <div class="price-feat"><div class="price-feat-check">✓</div><div class="price-feat-text"><strong>F2 · Roadmap y Sprints IA Futuros</strong> con framework de readiness, tipologías de sprint y criterios Go / Ajustar / No-Go.</div></div>
+    <div class="price-feat"><div class="price-feat-check">✓</div><div class="price-feat-text"><strong>F3 · PM Externo</strong> para iniciativas IA en curso: Protocolos, Calidad IA y VoiceBot como subcomponentes acompañados.</div></div>
+    <div class="price-feat"><div class="price-feat-check">✓</div><div class="price-feat-text"><strong>F4 · Capacitaciones IA aplicadas</strong> para el equipo líder de Canales, conectadas con casos reales de Pacífico Salud.</div></div>
+    <div class="price-feat" style="border-bottom:none"><div class="price-feat-check">✓</div><div class="price-feat-text"><strong>F5 · Meeting-in-a-Box IA</strong> y Playbook final con acuerdos, plantillas, criterios de gobierno y próximos pasos.</div></div>
   </div>
 
   <div class="card mb24">
@@ -1333,7 +1473,7 @@ html,body{height:100%;font-family:'Poppins',sans-serif;font-size:13px;background
     <div class="vision-title">Visión de <em>Partnership a Largo Plazo</em></div>
     <div class="vision-desc">Este programa de 6 meses es el primer servicio de una relación de largo plazo (12–24 meses). La intención de FutureLab es ser el partner estratégico de Pacífico Salud para la <strong style="color:var(--celeste);">Transformación de Canales 2026–2028</strong>, acompañando en fases sucesivas. Al finalizar el primer programa se evaluará conjuntamente el alcance del segundo período.</div>
     <div class="vision-phases">
-      <div class="vision-phase"><div class="vp-label">Programa base</div><div class="vp-val">Laboratorio IA · 6 meses</div></div>
+      <div class="vision-phase"><div class="vp-label">Programa base</div><div class="vp-val">2 pilares · 5 frentes</div></div>
       <div class="vision-phase"><div class="vp-label">Expansión</div><div class="vp-val">Nuevos casos de uso IA</div></div>
       <div class="vision-phase"><div class="vp-label">Nuevos canales</div><div class="vp-val">Escalamiento 2027</div></div>
       <div class="vision-phase"><div class="vp-label">Impacto</div><div class="vp-val">Métricas y ROI 2028</div></div>
